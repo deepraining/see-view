@@ -1,0 +1,25 @@
+{
+  "name": "jquery.seeView",
+  "version": "0.0.1",
+  "description": "A short cut view of jquery, like backbone view.",
+  "keywords": [
+    "jquery",
+    "view"
+  ],
+  "homepage": "https://github.com/senntyou",
+  "license": "MIT",
+  "moduleType": "globals",
+  "main": [
+    "jquery.seeView.js"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "1.9.1 - 3"
+  }
+}
