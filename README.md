@@ -1,39 +1,51 @@
-# A short cut view of jquery, like backbone view.
+# A short cut event binding for jquery, like backbone view.
 
-## use
+## quick start
 
-### 1. 加载脚本
+## quick start
+
+### 1. load resources
+
 ```
-<script src="jquery.js"></script>
-<script src="jquery.seeView.js"></script>
+var seeView = require('see-view');
+seeView({...});
+
+// or
+ var $ = require('jquery');
+$.seeView({...});
 ```
-### 2. 加载配置
+
+or load scripts directly
+
 ```
-$.seeView({
-    //事件代理元素，默认是document
-    el: "body",
+<script src="path/to/jquery"></script>
+<script src="path/to/jquery.seeView"></script>
+<script>
+seeView({...});
+// or
+$.seeView({...});
+</script>
+```
+
+### 2. how to use
+
+```
+seeView({
+    el: void 0, // delegate element, default is document.body
     events: {
-        //重中之重，元素与事件之间使用空格分隔，多个事件之间用逗号分隔，且不能有空格
-        //一个事件，一个监听对象，默认使用代理
-        "click #id": "haha",
-        //前面加一个感叹号表示不使用代理
-        "!focus tagName": "haha",
-        //二级元素，也使用代理
-        "click .class tagName": "haha",
-        //多个事件
-        "click,focus #id": "haha",
-        //多个事件，不使用代理
-        "!click,focus tagName": "haha",
-        //多个元素
-        "click .class, tagName, #id .class tagName": "haha"
+        'eventName selectors': 'methodName',
+        // do not use delegating
+        '!eventName selectors': 'methodName',
     },
-    haha: function(e) {
-
+    methodName: (e) => {
+        // do something
     }
 });
 ```
 
-说明
+* use a blank space to split eventName and selectors
+* `eventName`: event name, like `click`, `focus`
+* `selectors`: use `,` to split multi selectors, like `#id`, `#id, .class, tagName`, `#id tagName, .class tagName`
+* if you do not want to use `event delegating`, you add `!` before `eventName`
 
-* el: 事件代理元素，默认是document
-* events: 事件总集，与backbone基本一致。如果不想使用代理，可在事件前面加上 "!"
+## [demo code](./example)

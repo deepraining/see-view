@@ -1,7 +1,7 @@
 {
   "name": "see-view",
   "version": "0.1.0",
-  "description": "A short cut events binding for jquery, like backbone view.",
+  "description": "A short cut event binding for jquery, like backbone view.",
   "homepage": "https://github.com/senntyou/jquery.seeView",
   "author": "senntyou",
   "keywords": [
