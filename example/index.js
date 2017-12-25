@@ -1,4 +1,4 @@
-$.seeView({
+seeView({
     events: {
         '!click #test-1, #test-4': 'onTest'
     },
