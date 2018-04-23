@@ -1,7 +1,7 @@
 
 'use strict';
 
-var prefix = 'jquery.seeView: ';
+var prefix = 'see-view: ';
 
 module.exports = {
     log: (str) => {

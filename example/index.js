@@ -11,7 +11,7 @@ seeView({
     }
 });
 
-$.seeView({
+seeView({
     events: {
         'click .test-2, .test-5': 'onTest'
     },
@@ -24,7 +24,7 @@ $.seeView({
     }
 });
 
-$.seeView({
+seeView({
     el: 'body',
     events: {
         'click [data-type]': 'onTest'

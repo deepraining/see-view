@@ -1,8 +1,8 @@
 {
   "name": "see-view",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A short cut event binding for jquery, like backbone view.",
-  "homepage": "https://github.com/senntyou/jquery.seeView",
+  "homepage": "https://github.com/senntyou/see-view",
   "author": "senntyou",
   "keywords": [
     "jquery",
@@ -10,12 +10,12 @@
     "event",
     "bind"
   ],
-  "main": "dist/jquery.seeView.js",
+  "main": "dist/see-view.js",
   "license": "MIT",
   "readmeFilename": "README.md",
   "repository": {
     "type": "git",
-    "url": "https://github.com/senntyou/jquery.seeView"
+    "url": "https://github.com/senntyou/see-view"
   },
   "dependencies": {
     "jquery": "1.9.1 - 3"

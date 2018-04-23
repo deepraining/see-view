@@ -9,7 +9,7 @@ module.exports = {
   entry: './src/index.js',
   output: {
     path: __dirname + '/dist',
-    filename: 'jquery.seeView.js',
+    filename: 'see-view.js',
     library: 'seeView',
     libraryTarget: 'umd'
   },
@@ -26,9 +26,9 @@ module.exports = {
   },
   plugins: [
     new webpack.BannerPlugin(`
-    jquery.seeView v${packageJson.version}
+    see-view v${packageJson.version}
 
-    https://github.com/senntyou/jquery.seeView
+    https://github.com/senntyou/see-view
 
     @senntyou <jiangjinbelief@163.com>
 

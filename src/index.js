@@ -16,7 +16,7 @@ var bind = require('./bind');
  *         method:
  *     }
  */
-var seeView = (obj) => {
+module.exports = obj => {
     var events = obj.events;
 
     for (var attr in events) {
@@ -27,7 +27,3 @@ var seeView = (obj) => {
         }
     }
 };
-
-$.seeView = seeView;
-
-module.exports = seeView;

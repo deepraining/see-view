@@ -9,21 +9,15 @@
 ```
 var seeView = require('see-view');
 seeView({...});
-
-// or
- var $ = require('jquery');
-$.seeView({...});
 ```
 
 or load scripts directly
 
 ```
 <script src="path/to/jquery"></script>
-<script src="path/to/jquery.seeView"></script>
+<script src="path/to/see-view"></script>
 <script>
 seeView({...});
-// or
-$.seeView({...});
 </script>
 ```
 

@@ -1,12 +1,12 @@
 /*!
  * 
- *     jquery.seeView v0.1.0
+ *     see-view v0.1.1
  * 
- *     https://github.com/senntyou/jquery.seeView
+ *     https://github.com/senntyou/see-view
  * 
  *     @senntyou <jiangjinbelief@163.com>
  * 
- *     2017-12-25 17:50:16
+ *     2018-04-23 19:09:22
  *     
  */
 (function webpackUniversalModuleDefinition(root, factory) {
@@ -98,7 +98,7 @@ module.exports = __WEBPACK_EXTERNAL_MODULE_0__;
 
 
 
-var prefix = 'jquery.seeView: ';
+var prefix = 'see-view: ';
 
 module.exports = {
     log: function log(str) {
@@ -141,7 +141,7 @@ var bind = __webpack_require__(3);
  *         method:
  *     }
  */
-var seeView = function seeView(obj) {
+module.exports = function (obj) {
     var events = obj.events;
 
     for (var attr in events) {
@@ -151,10 +151,6 @@ var seeView = function seeView(obj) {
         }
     }
 };
-
-$.seeView = seeView;
-
-module.exports = seeView;
 
 /***/ }),
 /* 3 */
