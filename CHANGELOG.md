@@ -1,8 +1,8 @@
-# see-view changelog
+# Changelog
 
 ## 0.1.1
 
-- remove `$.seeView`
+- Remove `$.seeView`.
 
 ## 0.1.0
 

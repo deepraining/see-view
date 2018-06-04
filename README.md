@@ -1,4 +1,6 @@
-# A short cut event binding for jquery, like backbone view.
+# see-view 
+
+A short cut event binding for jquery, like backbone view.
 
 ## quick start
 
@@ -37,9 +39,9 @@ seeView({
 });
 ```
 
-* use a blank space to split eventName and selectors
-* `eventName`: event name, like `click`, `focus`
-* `selectors`: use `,` to split multi selectors, like `#id`, `#id, .class, tagName`, `#id tagName, .class tagName`
-* if you do not want to use `event delegating`, you add `!` before `eventName`
+* Use a blank space to split eventName and selectors.
+* `eventName`: Event name, like `click`, `focus`.
+* `selectors`: Use `,` to split multi selectors, like `#id`, `#id, .class, tagName`, `#id tagName, .class tagName`.
+* If you do not want to use `event delegating`, you add `!` before `eventName`.
 
 ## [demo code](./example)
