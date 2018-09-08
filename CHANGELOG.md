@@ -1,21 +1,16 @@
 # Changelog
 
-## 0.2.0 [2018-09-06]
+## 0.2.0 [2018-09-08]
 
 - Use `microbundle` to build project.
 
-## 0.1.1 [2018-08-27]
+# Changelog
 
-- `implement` can return `Promise`.
+## 0.1.1
 
-## 0.1.0 [2018-07-24]
+- Remove `$.seeView`.
 
-- Remove `implementDelay` option.
+## 0.1.0
 
-## 0.0.2
-
-- Add `implementDelay` option.
-
-## 0.0.1
-
-- Init.
+- New version, with many updates.
+- Rewrite core scripts, and update docs.

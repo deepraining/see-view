@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>demo</title>
+</head>
+<body>
+<p id="test-1">test-1</p>
+<p class="test-2">test-2</p>
+<p data-type="test-3">test-3</p>
+<p id="test-4">test-4</p>
+<p class="test-5">test-5</p>
+<p data-type="test-6">test-6</p>
+</body>
+<script src="../node_modules/jquery/dist/jquery.js"></script>
+<script>
+  window.jquery = window.jQuery; // compatible with microbundle
+</script>
+<script src="../dist/see-view.umd.js"></script>
+<script>
+  seeView({
+    events: {
+      '!click #test-1, #test-4': 'onTest'
+    },
+    onTest(e) {
+      console.log(e);
+      this.log('test-1, test-4');
+    },
+    log(str) {
+      console.log(str);
+    }
+  });
+
+  seeView({
+    events: {
+      'click .test-2, .test-5': 'onTest'
+    },
+    onTest(e) {
+      console.log(e);
+      this.log('test-2, test-5');
+    },
+    log(str) {
+      console.log(str);
+    }
+  });
+
+  seeView({
+    events: {
+      'click [data-type]': 'onTest'
+    },
+    onTest(e) {
+      console.log(e);
+      this.log('test-3, test-6');
+    },
+    log(str) {
+      console.log(str);
+    }
+  });
+</script>
+</html>
