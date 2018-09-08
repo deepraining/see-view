@@ -1,29 +1,12 @@
+import config from './config';
+import setEnv from './set_env';
+import getEnv from './get_env';
+import send from './send';
+import set from './set';
 
-'use strict';
+send.config = config;
+send.setEnv = setEnv;
+send.getEnv = getEnv;
+send.set = set;
 
-var $ = require('jquery');
-
-var logger = require('./util/logger');
-var bind = require('./bind');
-
-/**
- *
- * @param obj
- *     {
- *         events: {
- *
- *         },
- *         method:
- *     }
- */
-module.exports = obj => {
-    var events = obj.events;
-
-    for (var attr in events) {
-        if (events.hasOwnProperty(attr)) {
-            var method = obj[events[attr]];
-            if (method) bind(obj, attr, method);
-            else logger.error(`no such a method: ${method}`)
-        }
-    }
-};
+export default send;
