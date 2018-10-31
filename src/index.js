@@ -1,5 +1,42 @@
-import { error } from './util/logger';
-import bind from './bind';
+import jQuery from 'jquery';
+import { error, warn } from './logger';
+
+const bind = (obj, key, methodName) => {
+  const noDelegating = key.slice(0, 1) === '!'; // no event delegating
+
+  const realKey = noDelegating ? key.slice(1) : key;
+
+  const keyArray = realKey.split(/\s+/g);
+
+  if (keyArray.length < 2) {
+    error(`invalid event key: ${key}`);
+    return;
+  }
+
+  const eventName = keyArray.shift();
+
+  const selectors = keyArray.join(' ');
+
+  const method = obj[methodName];
+
+  if (selectors === 'window') {
+    jQuery(window).on(eventName, e => {
+      method.call(obj, e);
+    });
+  } else if (selectors === 'document') {
+    jQuery(document).on(eventName, e => {
+      method.call(obj, e);
+    });
+  } else if (noDelegating) {
+    jQuery(selectors).on(eventName, e => {
+      method.call(obj, e);
+    });
+  } else {
+    jQuery(document).on(eventName, selectors, e => {
+      method.call(obj, e);
+    });
+  }
+};
 
 export default obj => {
   if (!obj) return;
@@ -7,7 +44,7 @@ export default obj => {
   const { events } = obj;
 
   if (!events) {
-    error('missing "events" field in imported object.', obj);
+    warn('missing events field in imported object', obj);
     return;
   }
 
@@ -16,7 +53,7 @@ export default obj => {
 
     if (!methodName) return;
     if (typeof obj[methodName] !== 'function') {
-      error(`not found "${methodName}" method in imported object.`, obj);
+      warn(`not found ${methodName} method in imported object`, obj);
       return;
     }
 
