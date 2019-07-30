@@ -5,7 +5,7 @@
   "module": "lib/m.js",
   "umd:main": "lib/umd.js",
   "amd:main": "lib/amd.js",
-  "description": "A shortcut event binding for jquery, like backbone view.",
+  "description": "A shortcut way of event binding for JQuery, like Backbone.View.",
   "repository": {
     "type": "git",
     "url": "https://github.com/senntyou/see-view"
